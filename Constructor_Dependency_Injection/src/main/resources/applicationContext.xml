@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--Bean object of POJO class  (Student.java)   with name stdID-->
+    <!--Bean obj can acces the properties of POJO class i.e. Student class-->
+    <bean class="in.sk.bean.Address" id="addr">
+         <constructor-arg value="222"/>
+        <constructor-arg value="Delhi"/>
+        <constructor-arg value="441914"/>
+    </bean>
+    <bean class="in.sk.bean.Student" id="std">
+        <constructor-arg value="101"/>
+        <constructor-arg value="Dipesh"/>
+        <constructor-arg  ref="addr"/>
+    </bean>
+</beans>
